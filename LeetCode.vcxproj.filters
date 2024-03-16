@@ -22,7 +22,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RadixSort.h">
+    <ClInclude Include="Sorting\RadixSort.h">
       <Filter>Lib\Sorting</Filter>
     </ClInclude>
   </ItemGroup>
