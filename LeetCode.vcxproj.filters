@@ -15,6 +15,12 @@
     <Filter Include="Lib\Sorting">
       <UniqueIdentifier>{c61965a5-7ff4-4aa9-8642-e4c2910e63bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Binary Search">
+      <UniqueIdentifier>{80a84c30-349e-40f4-9be5-660272b84ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\Hash Table">
+      <UniqueIdentifier>{b85b663c-a6b9-48ed-a453-fbf7b452b09e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode.cpp">
@@ -27,6 +33,15 @@
     </ClInclude>
     <ClInclude Include="Sorting\SortedArrayModified.h">
       <Filter>Lib\Sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="Binary Search\MinimumTimeToRepairCars.h">
+      <Filter>Lib\Binary Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash Table\DestroySequentialTargets.h">
+      <Filter>Lib\Hash Table</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Lib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

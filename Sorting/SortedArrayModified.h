@@ -1,7 +1,5 @@
 #pragma once
-
-#include <vector>
-using namespace std;
+#include "..\Common.h"
 
 // https://leetcode.com/problems/squares-of-a-sorted-array/
 vector<int> sortedSquares(vector<int>& nums) {

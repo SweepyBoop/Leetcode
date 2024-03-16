@@ -1,6 +1,5 @@
 #pragma once
-#include <vector>
-using namespace std;
+#include "..\Common.h"
 
 // https://leetcode.com/problems/minimum-time-to-repair-cars/
 // Given x minutes, we can check how many cars can be fixed in total and whether it >= cars
@@ -11,7 +10,8 @@ long long repairCars(vector<int>& ranks, int cars) {
     long long left = 0;
     long long right = 1e14;
     while (left < right) {
-        int mid = (left + right) / 2;
+        // avoid overflow
+        long long mid = left + (right - left) / 2;
         // given mid minutes, how many cars can we repair
         long long repair = 0;
         for (int rank : ranks) {

@@ -1,8 +1,5 @@
 #pragma once
-
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "..\Common.h"
 
 #define NUM_DIGITS 10
 
