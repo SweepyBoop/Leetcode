@@ -8,3 +8,7 @@ project.lock.json
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
+
+*.vcxproj.user
+*x64/
+*x86/
