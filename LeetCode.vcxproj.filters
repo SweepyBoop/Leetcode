@@ -25,6 +25,8 @@
     <ClInclude Include="Sorting\RadixSort.h">
       <Filter>Lib\Sorting</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting\SortedArrayModified.h" />
+    <ClInclude Include="Sorting\SortedArrayModified.h">
+      <Filter>Lib\Sorting</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
