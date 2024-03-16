@@ -1,0 +1,10 @@
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+project.lock.json
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
