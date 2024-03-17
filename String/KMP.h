@@ -2,9 +2,9 @@
 #include "..\Common.h"
 
 // lps[i] = the longest proper prefix of pat[0..i] which is also a suffix of pat[0..i]. 
-// For the pattern “AAAA”, lps[] is [0, 1, 2, 3]
-// For the pattern “AAABAAA”, lps[] is[0, 1, 2, 0, 1, 2, 3]
-vector<int> makeLPS(string needle) {
+// For the pattern "AAAA", lps[] is [0, 1, 2, 3]
+// For the pattern "AAABAAA", lps[] is[0, 1, 2, 0, 1, 2, 3]
+vector<int> longestPrefixSuffix(string needle) {
     int n = needle.length();
     vector<int> lps(n, 0);
 
