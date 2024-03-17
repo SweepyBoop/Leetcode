@@ -24,6 +24,9 @@
     <Filter Include="Lib\Two Pointers">
       <UniqueIdentifier>{5676c280-a8c2-4008-ab25-58f08a9bcdd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\String">
+      <UniqueIdentifier>{d5492031-93ad-4207-a496-2820aeb3bc31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode.cpp">
@@ -54,6 +57,9 @@
     </ClInclude>
     <ClInclude Include="Two Pointers\TakeKOfEachChar.h">
       <Filter>Lib\Two Pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="String\KMP.h">
+      <Filter>Lib\String</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
