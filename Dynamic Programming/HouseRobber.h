@@ -1,6 +1,8 @@
 #pragma once
 #include "..\Common.h"
 
+// https://leetcode.com/problems/house-robber/description/
+
 // at each step, there is a decision to be made, whether to rob nums[i]
 // a. rob nums[i], then cannot rob nums[i-1], we can take rob(i-2)
 // b. don't rob nums[i], then we can take rob(i-1)
