@@ -26,3 +26,29 @@ int rob(vector<int>& nums) {
 
     return dp[n - 1];
 }
+
+int rob_constSpace(vector<int>& nums) {
+    int n = nums.size();
+
+    if (n == 1) {
+        return nums[0];
+    }
+
+    //       House House House House
+    // prev2 prev1 iter
+    //       prev2 prev1 iter
+    //             prev2 prev1 iter
+    //                   prev2 prev1 iter
+    //                         return
+    // 
+    // prev2 can be used as iter at the same time
+
+    int prev1 = nums[0];
+    int prev2 = 0;
+    for (int i = 1; i < n; ++i) {
+        int tmp = prev1;
+        prev1 = max(prev1, nums[i] + prev2);
+        prev2 = tmp;
+    }
+    return prev1;
+}
