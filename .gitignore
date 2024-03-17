@@ -12,3 +12,5 @@ project.lock.json
 *.vcxproj.user
 *x64/
 *x86/
+
+Leetcode.cpp
