@@ -13,4 +13,4 @@ project.lock.json
 *x64/
 *x86/
 
-LeetCode.cpp
+main.cpp
