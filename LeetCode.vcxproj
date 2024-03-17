@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Binary Search\MinimumTimeToRepairCars.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Dynamic Programming\HouseRobber.h" />
     <ClInclude Include="Hash Table\DestroySequentialTargets.h" />
     <ClInclude Include="Sorting\RadixSort.h" />
     <ClInclude Include="Sorting\SortedArrayModified.h" />

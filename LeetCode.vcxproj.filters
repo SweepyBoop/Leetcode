@@ -27,9 +27,12 @@
     <Filter Include="Lib\String">
       <UniqueIdentifier>{d5492031-93ad-4207-a496-2820aeb3bc31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Dynamic Programming">
+      <UniqueIdentifier>{2ab486ed-68a6-4123-ae79-e0a31eb05432}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LeetCode.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,6 +63,9 @@
     </ClInclude>
     <ClInclude Include="String\KMP.h">
       <Filter>Lib\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamic Programming\HouseRobber.h">
+      <Filter>Lib\Dynamic Programming</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
