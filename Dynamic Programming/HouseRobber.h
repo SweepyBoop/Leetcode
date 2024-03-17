@@ -52,3 +52,42 @@ int rob_constSpace(vector<int>& nums) {
     }
     return prev1;
 }
+
+// https://leetcode.com/problems/house-robber-ii/description/
+// we can divide this problem into:
+// 7 4 1 9 3 8 6 5
+// 7 4 1 9 3 8 6   => max1
+//   4 1 9 3 8 6 5 => max2
+// and return max(max1, max2)
+
+// refactor rob into a function that also takes a range, this range has at least 2 elements
+int rob_range(vector<int>& nums, int start, int end) {
+    int n = nums.size();
+
+    //       House House House House
+    // prev2 prev1
+    //       prev2 prev1
+    //             prev2 prev1
+    //                   prev2 prev1
+    //                         return
+
+    int prev1 = nums[start];
+    int prev2 = 0;
+    for (int i = start + 1; i <= end; ++i) {
+        int tmp = prev1;
+        prev1 = max(prev1, nums[i] + prev2);
+        prev2 = tmp;
+    }
+    return prev1;
+}
+
+int rob_ii(vector<int>& nums) {
+    int n = nums.size();
+    if (n == 1) {
+        return nums[0];
+    }
+
+    int max1 = rob_range(nums, 0, n - 2);
+    int max2 = rob_range(nums, 1, n - 1);
+    return max(max1, max2);
+}
