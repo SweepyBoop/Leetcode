@@ -14,7 +14,7 @@ int rob(vector<int>& nums) {
         return nums[0];
     }
 
-    // dp[i] max money if robbing nums[i]
+    // dp[i] max money from robbing nums[0..i]
     vector<int> dp(n, 0);
     dp[0] = nums[0];
     for (int i = 1; i < n; ++i) {
