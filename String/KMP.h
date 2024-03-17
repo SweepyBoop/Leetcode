@@ -27,6 +27,11 @@ vector<int> makeLPS(string needle) {
     return lps;
 }
 
+// https://www.geeksforgeeks.org/longest-prefix-also-suffix/
+// Given a string s, find the length of the longest prefix, which is also a suffix. The prefix and suffix should not overlap.
+// Input : S = aaaa
+// Output: 2
+
 // https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/?envType=study-plan-v2&envId=top-interview-150
 int strStr(string haystack, string needle) {
     // KMP is similar to generating LPS
