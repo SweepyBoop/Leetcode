@@ -21,6 +21,9 @@
     <Filter Include="Lib\Hash Table">
       <UniqueIdentifier>{b85b663c-a6b9-48ed-a453-fbf7b452b09e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Two Pointers">
+      <UniqueIdentifier>{5676c280-a8c2-4008-ab25-58f08a9bcdd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode.cpp">
@@ -42,6 +45,15 @@
     </ClInclude>
     <ClInclude Include="Common.h">
       <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Two Pointers\IntervalListIntersections.h">
+      <Filter>Lib\Two Pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="Two Pointers\MergeInternals.h">
+      <Filter>Lib\Two Pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="Two Pointers\TakeKOfEachChar.h">
+      <Filter>Lib\Two Pointers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

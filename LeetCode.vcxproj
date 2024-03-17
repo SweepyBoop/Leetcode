@@ -135,6 +135,9 @@
     <ClInclude Include="Hash Table\DestroySequentialTargets.h" />
     <ClInclude Include="Sorting\RadixSort.h" />
     <ClInclude Include="Sorting\SortedArrayModified.h" />
+    <ClInclude Include="Two Pointers\IntervalListIntersections.h" />
+    <ClInclude Include="Two Pointers\MergeInternals.h" />
+    <ClInclude Include="Two Pointers\TakeKOfEachChar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
