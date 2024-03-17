@@ -38,7 +38,7 @@ int strStr(string haystack, string needle) {
     int haystackLen = haystack.length();
     int needleLen = needle.length();
 
-    auto LPS = makeLPS(needle);
+    auto LPS = longestPrefixSuffix(needle);
 
     int haystackPtr = 0;
     int needlePtr = 0;
