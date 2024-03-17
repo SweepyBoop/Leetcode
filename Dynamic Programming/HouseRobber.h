@@ -91,3 +91,29 @@ int rob_ii(vector<int>& nums) {
     int max2 = rob_range(nums, 1, n - 1);
     return max(max1, max2);
 }
+
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
+
+// https://leetcode.com/problems/house-robber-iii/description/
+// for each node, the decision is:
+// a. rob this node, then can't rob either child node
+// b. don't rob this node, then can rob either child node
+// we can have 2 dp that stores the optimal ans when robbing a node vs. not robbing a node
+
+// but just having one dp works, e.g.,
+//       A(3)
+//   B(2)     C(3)
+//     D(3)     E(1)
+// what if we rob top A => we can't rob its children B or C, but dp(B) doesn't rob B anyways?
+// then dp(B) = dp(D) as if B wasn't involved in the first place => taking dp(D) is still correct
+
+int rob(TreeNode* root) {
+
+}
