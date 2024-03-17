@@ -37,13 +37,11 @@ int rob_constSpace(vector<int>& nums) {
     }
 
     //       House House House House
-    // prev2 prev1 iter
-    //       prev2 prev1 iter
-    //             prev2 prev1 iter
-    //                   prev2 prev1 iter
+    // prev2 prev1
+    //       prev2 prev1
+    //             prev2 prev1
+    //                   prev2 prev1
     //                         return
-    // 
-    // prev2 can be used as iter at the same time
 
     int prev1 = nums[0];
     int prev2 = 0;
