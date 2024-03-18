@@ -139,6 +139,7 @@
     <ClInclude Include="String\KMP.h" />
     <ClInclude Include="Two Pointers\IntervalListIntersections.h" />
     <ClInclude Include="Two Pointers\MergeInternals.h" />
+    <ClInclude Include="Two Pointers\RemoveElements.h" />
     <ClInclude Include="Two Pointers\TakeKOfEachChar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
