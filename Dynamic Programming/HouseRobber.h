@@ -114,6 +114,33 @@ struct TreeNode {
 // what if we rob top A => we can't rob its children B or C, but dp(B) doesn't rob B anyways?
 // then dp(B) = dp(D) as if B wasn't involved in the first place => taking dp(D) is still correct
 
-int rob(TreeNode* root) {
+int robHelper(TreeNode* root, unordered_map<TreeNode*, int>& memory) {
+    if (!root) {
+        return 0;
+    }
 
+    if (memory[root]) {
+        return memory[root];
+    }
+
+    // if we rob root, then we can't rob root->left or root->right
+    int rob = root->val;
+    if (root->left) {
+        rob += robHelper(root->left->left, memory) + robHelper(root->left->right, memory);
+    }
+    if (root->right) {
+        rob += robHelper(root->right->left, memory) + robHelper(root->right->right, memory);
+    }
+
+    // if we don't rob root
+    int noRob = robHelper(root->left, memory) + robHelper(root->right, memory);
+
+    int res = max(rob, noRob);
+    memory[root] = res;
+    return res;
+}
+
+int rob(TreeNode* root) {
+    unordered_map<TreeNode*, int> memory;
+    return robHelper(root, memory);
 }
