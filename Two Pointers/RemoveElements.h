@@ -32,3 +32,20 @@ int removeDuplicates(vector<int>& nums) {
     }
     return used + 1;
 }
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
+// can be generalized to each element appears at most k times
+
+//this will not work, we need to check i against the index where the same value appeared for the first time
+/*
+int remoteDuplicates_wrong(vector<int>& nums, int k) {
+    // instead of comparing with previous element, compare with nums[i-k]
+    int used = -1;
+    for (int i = 0; i < nums.size(); ++i) {
+        if (i < k || nums[i] != nums[i - k]) {
+            nums[++used] = nums[i];
+        }
+    }
+    return used + 1;
+}
+*/
