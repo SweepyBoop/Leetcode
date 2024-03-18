@@ -20,3 +20,15 @@ int removeElement(vector<int>& nums, int val) {
     }
     return lastPos + 1;
 }
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+int removeDuplicates(vector<int>& nums) {
+    // 2 pointers: one for iteration, one for last used pos
+    int used = -1;
+    for (int i = 0; i < nums.size(); ++i) {
+        if (i == 0 || nums[i] != nums[used]) {
+            nums[++used] = nums[i];
+        }
+    }
+    return used + 1;
+}
