@@ -49,3 +49,24 @@ int remoteDuplicates_wrong(vector<int>& nums, int k) {
     return used + 1;
 }
 */
+
+int removeDuplicates(vector<int>& nums, int k) {
+    int used = -1;
+    int currentVal = 0;
+    // if we encounter an element == currentVal, we can still keep it if index < firstIndexOfCurrentVal + k
+    int firstIndexOfCurrentVal = 0;
+    for (int i = 0; i < nums.size(); ++i) {
+        if (i == 0 || nums[i] != currentVal) { // a new value, we can safely use it
+            nums[++used] = nums[i];
+            currentVal = nums[i];
+            firstIndexOfCurrentVal = i;
+        }
+        else { // we have seen this value before
+            if (i < firstIndexOfCurrentVal + k) {
+                nums[++used] = nums[i];
+            }
+        }
+    }
+
+    return used + 1;
+}
