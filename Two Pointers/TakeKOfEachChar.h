@@ -2,10 +2,6 @@
 #include "..\Common.h"
 
 int takeCharacters(string s, int k) {
-    // sliding window [i..j] in the middle for chars we don't take
-    // when i slides left, exclude one more char
-    // when j slides left, include one more char
-
     unordered_map<char, int> counts;
     
     // first check if a solution exists
