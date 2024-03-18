@@ -3,7 +3,7 @@
 
 int takeCharacters(string s, int k) {
     unordered_map<char, int> counts;
-    
+
     // first check if a solution exists
     for (auto ch : s) {
         ++counts[ch];

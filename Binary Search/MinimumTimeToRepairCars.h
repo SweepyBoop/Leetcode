@@ -17,7 +17,7 @@ long long repairCars(vector<int>& ranks, int cars) {
         for (int rank : ranks) {
             repair += sqrt(mid / rank);
         }
-        
+
         if (repair < cars) {
             left = mid + 1;
         }
