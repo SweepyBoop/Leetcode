@@ -30,6 +30,9 @@
     <Filter Include="Lib\Dynamic Programming">
       <UniqueIdentifier>{2ab486ed-68a6-4123-ae79-e0a31eb05432}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Bitwise">
+      <UniqueIdentifier>{5d029b82-6a3b-4de1-aed9-72998d199d94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,6 +72,9 @@
     </ClInclude>
     <ClInclude Include="Two Pointers\RemoveElements.h">
       <Filter>Lib\Two Pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitwise\MajorityElement.h">
+      <Filter>Lib\Bitwise</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
