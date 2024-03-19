@@ -21,3 +21,19 @@ bool hasCycle(ListNode* head) {
 
     return false;
 }
+
+// https://leetcode.com/problems/linked-list-cycle-ii/description/
+ListNode* detectCycle(ListNode* head) {
+    // hash table to store visited nodes, if we encounter it again, it's the beginning of the cycle
+    unordered_set<ListNode*> visited;
+    while (head) {
+        if (visited.find(head) != visited.end()) {
+            return head;
+        }
+
+        visited.insert(head);
+        head = head->next;
+    }
+
+    return nullptr;
+}
