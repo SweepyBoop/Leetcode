@@ -33,6 +33,9 @@
     <Filter Include="Lib\Bitwise">
       <UniqueIdentifier>{5d029b82-6a3b-4de1-aed9-72998d199d94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Linked List">
+      <UniqueIdentifier>{d6c350b2-c618-4427-85df-7fa764d293df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,6 +78,9 @@
     </ClInclude>
     <ClInclude Include="Bitwise\MajorityElement.h">
       <Filter>Lib\Bitwise</Filter>
+    </ClInclude>
+    <ClInclude Include="Linked List\Reverse.h">
+      <Filter>Lib\Linked List</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

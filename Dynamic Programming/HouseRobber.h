@@ -92,15 +92,6 @@ int rob_ii(vector<int>& nums) {
     return max(max1, max2);
 }
 
-struct TreeNode {
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-};
-
 // https://leetcode.com/problems/house-robber-iii/description/
 // for each node, the decision is:
 // a. rob this node, then can't rob either child node
