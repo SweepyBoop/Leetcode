@@ -82,5 +82,8 @@
     <ClInclude Include="Linked List\Reverse.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="Linked List\Cycle.h">
+      <Filter>Lib\Linked List</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
