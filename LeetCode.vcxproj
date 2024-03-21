@@ -137,6 +137,7 @@
     <ClInclude Include="Hash Table\DestroySequentialTargets.h" />
     <ClInclude Include="Linked List\AddNumbers.h" />
     <ClInclude Include="Linked List\Cycle.h" />
+    <ClInclude Include="Linked List\Merge.h" />
     <ClInclude Include="Linked List\Reverse.h" />
     <ClInclude Include="Sorting\RadixSort.h" />
     <ClInclude Include="Sorting\SortedArrayModified.h" />
