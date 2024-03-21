@@ -34,3 +34,33 @@ ListNode* reverseList(ListNode* head) {
     }
     return prev;
 }
+
+// https://leetcode.com/problems/reverse-linked-list-ii/
+ListNode* reverseBetween(ListNode* head, int left, int right) {
+    // lead -> start..end -> tail
+    ListNode* sentinel = new ListNode(0, head);
+    ListNode* lead = sentinel;
+    for (int i = 1; i < left; ++i) {
+        lead = lead->next;
+    }
+
+    // now revert start..end
+    ListNode* start = lead->next; // we need to set start->next = tail
+    ListNode* end = nullptr; // when we reach the end, note it down, since we need to set prev->next = last
+    ListNode* prev = lead;
+    ListNode* iter = start;
+    for (int i = left; i <= right; ++i) {
+        if (i == right) {
+            end = iter;
+        }
+        ListNode* next = iter->next;
+        iter->next = prev;
+        prev = iter;
+        iter = next;
+    } // now iter points to one past end, i.e., tail
+
+    start->next = iter;
+    lead->next = end;
+
+    return sentinel->next;
+}
