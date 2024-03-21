@@ -35,3 +35,32 @@ ListNode* deleteDuplicates(ListNode* head) {
     }
     return sentinel->next;
 }
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+ListNode* deleteDuplicatesII(ListNode* head) {
+    ListNode* sentinel = new ListNode();
+    ListNode* prev = sentinel; // we might delete the first node
+
+    while (head) {
+        // advance until current node is no longer a dup
+        while (head->next && head->next->val == head->val) {
+            // detected current node is a dup, skip all nodes with that value
+            // use another iterator to do so
+            int val = head->val;
+            ListNode* iter = head;
+            while (iter && iter->val == val) {
+                iter = iter->next;
+            }
+            head = iter; // we advanced to a node with a different value, repeat the logic
+        }
+
+        // current node is now not a dup
+        prev->next = head;
+        prev = head;
+        if (head) {
+            head = head->next;
+        }
+    }
+
+    return sentinel->next;
+}
