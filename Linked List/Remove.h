@@ -21,3 +21,17 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
     left->next = left->next->next;
     return sentinel->next;
 }
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+ListNode* deleteDuplicates(ListNode* head) {
+    // keep track of previous val and skip if the same
+    ListNode* sentinel = new ListNode(0, head);
+    while (head) {
+        // skip all nodes with the same value as iter
+        while (head->next && head->next->val == head->val) {
+            head->next = head->next->next;
+        }
+        head = head->next;
+    }
+    return sentinel->next;
+}
