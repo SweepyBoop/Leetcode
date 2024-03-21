@@ -33,7 +33,7 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
         int minIndex = -1; // if no element left, this will be -1 and terminate the loop
         for (int i = 0; i < n; ++i)
         {
-            if (minIndex == -1 || (lists[i] && lists[i]->val < lists[minIndex]->val)) {
+            if (lists[i] && (minIndex == -1 || lists[i]->val < lists[minIndex]->val)) {
                 minIndex = i;
             }
         }
