@@ -51,7 +51,7 @@ ListNode* deleteDuplicatesII(ListNode* head) {
             while (iter && iter->val == val) {
                 iter = iter->next;
             }
-            head = iter; // we advanced to a node with a different value, repeat the logic
+            head = iter; // we advanced to a node with a different value, repeat the logic and check this new node
         }
 
         // current node is now not a dup
