@@ -91,5 +91,8 @@
     <ClInclude Include="Linked List\Merge.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="Linked List\Clone.h">
+      <Filter>Lib\Linked List</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
