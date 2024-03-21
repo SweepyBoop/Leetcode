@@ -97,5 +97,8 @@
     <ClInclude Include="Linked List\Remove.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="Linked List\Rotate.h">
+      <Filter>Lib\Linked List</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

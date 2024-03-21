@@ -141,6 +141,7 @@
     <ClInclude Include="Linked List\Merge.h" />
     <ClInclude Include="Linked List\Remove.h" />
     <ClInclude Include="Linked List\Reverse.h" />
+    <ClInclude Include="Linked List\Rotate.h" />
     <ClInclude Include="Sorting\RadixSort.h" />
     <ClInclude Include="Sorting\SortedArrayModified.h" />
     <ClInclude Include="String\KMP.h" />
