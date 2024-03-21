@@ -43,7 +43,7 @@ ListNode* deleteDuplicatesII(ListNode* head) {
 
     while (head) {
         // advance until current node is no longer a dup
-        while (head->next && head->next->val == head->val) {
+        while (head && head->next && head->next->val == head->val) {
             // detected current node is a dup, skip all nodes with that value
             // use another iterator to do so
             int val = head->val;
