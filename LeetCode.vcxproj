@@ -138,6 +138,7 @@
     <ClInclude Include="Linked List\AddNumbers.h" />
     <ClInclude Include="Linked List\Clone.h" />
     <ClInclude Include="Linked List\Cycle.h" />
+    <ClInclude Include="Linked List\DoublyLinkedList.h" />
     <ClInclude Include="Linked List\Merge.h" />
     <ClInclude Include="Linked List\Remove.h" />
     <ClInclude Include="Linked List\Reverse.h" />
