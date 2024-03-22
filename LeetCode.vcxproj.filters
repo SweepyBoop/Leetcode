@@ -100,11 +100,13 @@
     <ClInclude Include="Linked List\Rotate.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
-    <ClInclude Include="Linked List\Split.h" />
     <ClInclude Include="Linked List\DoublyLinkedList.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
     <ClInclude Include="String\TextJustification.h">
+      <Filter>Lib\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Linked List\Split.h">
       <Filter>Lib\String</Filter>
     </ClInclude>
   </ItemGroup>
