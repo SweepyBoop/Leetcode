@@ -147,6 +147,7 @@
     <ClInclude Include="Sorting\RadixSort.h" />
     <ClInclude Include="Sorting\SortedArrayModified.h" />
     <ClInclude Include="String\KMP.h" />
+    <ClInclude Include="String\TextJustification.h" />
     <ClInclude Include="Two Pointers\IntervalListIntersections.h" />
     <ClInclude Include="Two Pointers\MergeInternals.h" />
     <ClInclude Include="Two Pointers\RemoveElements.h" />
