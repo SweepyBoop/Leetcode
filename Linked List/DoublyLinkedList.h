@@ -10,6 +10,7 @@ struct Node {
     Node(int key, int val) : key(key), val(val), next(nullptr), prev(nullptr) {}
 };
 
+// https://leetcode.com/problems/lru-cache/description/
 class LRUCache {
 public:
     LRUCache(int capacity) : capacity(capacity) {
