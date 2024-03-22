@@ -109,5 +109,8 @@
     <ClInclude Include="Linked List\Split.h">
       <Filter>Lib\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="String\SplitMessage.h">
+      <Filter>Lib\String</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
