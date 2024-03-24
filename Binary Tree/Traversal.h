@@ -51,6 +51,10 @@ void printPreOrder(TreeNode* root) {
 }
 
 void printPreOrderIterative(TreeNode* root) {
+    if (!root) {
+        return;
+    }
+
     stack<TreeNode*> s;
     s.push(root);
     while (!s.empty()) {
