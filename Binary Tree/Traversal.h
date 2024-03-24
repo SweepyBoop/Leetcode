@@ -39,3 +39,30 @@ void printInOrderIterative(TreeNode* root) {
         current = current->right;
     }
 }
+
+void printPreOrder(TreeNode* root) {
+    if (!root) {
+        return;
+    }
+
+    cout << root->val << " ";
+    printPreOrder(root->left);
+    printPreOrder(root->right);
+}
+
+void printPreOrderIterative(TreeNode* root) {
+    stack<TreeNode*> s;
+    s.push(root);
+    while (!s.empty()) {
+        TreeNode* pop = s.top();
+        cout << pop->val << " ";
+
+        if (pop->left) {
+            s.push(pop->left);
+        }
+
+        if (pop->right) {
+            s.push(pop->right);
+        }
+    }
+}
