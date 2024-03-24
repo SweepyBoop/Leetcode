@@ -36,6 +36,9 @@
     <Filter Include="Lib\Linked List">
       <UniqueIdentifier>{d6c350b2-c618-4427-85df-7fa764d293df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lib\Binary Tree">
+      <UniqueIdentifier>{55ad9abc-2c56-4144-ac15-554d52ff65a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -111,6 +114,9 @@
     </ClInclude>
     <ClInclude Include="String\SplitMessage.h">
       <Filter>Lib\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Binary Tree\MaxDepth.h">
+      <Filter>Lib\Binary Tree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
