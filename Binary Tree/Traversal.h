@@ -3,6 +3,9 @@
 
 // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 
+// The DFS strategy can be further distinguished as preorder DFS, inorder DFS and postorder DFS
+// depending on the relative order of visit among the node itself and its child nodes.
+
 // left->root->right
 void printInOrder(TreeNode* root) {
     if (!root) {
