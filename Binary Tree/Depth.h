@@ -41,3 +41,26 @@ int maxDepth(TreeNode* root) {
     }
     return maxDepth;
 }
+
+// https://leetcode.com/problems/minimum-depth-of-binary-tree/
+int minDepth(TreeNode* root) {
+    if (!root) {
+        return 0;
+    }
+
+    if (!root->left && !root->right) {
+        return 1;
+    }
+
+    // this is incorrect, if one child is NULL and another is not, we should discard the result from the NULL side
+    // return 1 + min(minDepth(root->left), minDepth(root->right));
+
+    int ans = INT_MAX;
+    if (root->left) {
+        ans = min(ans, 1 + minDepth(root->left));
+    }
+    if (root->right) {
+        ans = min(ans, 1 + minDepth(root->right));
+    }
+    return ans;
+}
