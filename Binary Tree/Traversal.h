@@ -160,3 +160,49 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // just reverse the odd index levels (level[1], level[3], etc.)
+
+// https://leetcode.com/problems/binary-tree-vertical-order-traversal/
+// still BFS with a queue, but need to keep track of columns
+// root has column 0, root->left: -1, root->right: 1, etc.
+vector<vector<int>> verticalOrder(TreeNode* root) {
+    vector<vector<int>> ans;
+    if (!root) {
+        return ans;
+    }
+
+    map<int, vector<int>> columns;
+    queue<pair<TreeNode*, int>> q; // track column for every node
+    q.push({ root, 0 });
+
+    int minColumn = 0;
+    int maxColumn = 0;
+    while (!q.empty()) {
+        int levelSize = q.size();
+
+        while (levelSize--) {
+            auto front = q.front();
+            auto node = front.first;
+            auto column = front.second;
+            q.pop();
+
+            columns[column].push_back(node->val);
+            minColumn = min(minColumn, column);
+            maxColumn = max(maxColumn, column);
+
+            if (node->left) {
+                q.push({ node->left, column - 1 });
+            }
+
+            if (node->right) {
+                q.push({ node->right, column + 1 });
+            }
+        }
+    }
+
+    for (int i = minColumn; i <= maxColumn; ++i) {
+        if (!columns[i].empty()) {
+            ans.push_back(columns[i]);
+        }
+    }
+    return ans;
+}
