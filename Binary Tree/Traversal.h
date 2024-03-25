@@ -35,7 +35,7 @@ void printInOrderIterative(TreeNode* root) {
         cout << current->val << " ";
         s.pop();
 
-        // we have visited the node and left sub tree
+        // we have visited the node and its left sub tree
         current = current->right;
     }
 }
