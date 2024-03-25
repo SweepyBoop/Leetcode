@@ -124,5 +124,8 @@
     <ClInclude Include="Binary Tree\Balanced.h">
       <Filter>Lib\Binary Tree</Filter>
     </ClInclude>
+    <ClInclude Include="Binary Tree\Invert.h">
+      <Filter>Lib\Binary Tree</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

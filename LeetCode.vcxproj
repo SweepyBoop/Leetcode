@@ -133,6 +133,7 @@
     <ClInclude Include="Binary Search\MinimumTimeToRepairCars.h" />
     <ClInclude Include="Binary Tree\Balanced.h" />
     <ClInclude Include="Binary Tree\Depth.h" />
+    <ClInclude Include="Binary Tree\Invert.h" />
     <ClInclude Include="Binary Tree\Traversal.h" />
     <ClInclude Include="Bitwise\MajorityElement.h" />
     <ClInclude Include="Common.h" />
