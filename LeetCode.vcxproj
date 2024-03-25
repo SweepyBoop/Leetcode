@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Binary Search\MinimumTimeToRepairCars.h" />
     <ClInclude Include="Binary Tree\Balanced.h" />
+    <ClInclude Include="Binary Tree\Construct.h" />
     <ClInclude Include="Binary Tree\Depth.h" />
     <ClInclude Include="Binary Tree\Invert.h" />
     <ClInclude Include="Binary Tree\Mirror.h" />
