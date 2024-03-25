@@ -206,3 +206,48 @@ vector<vector<int>> verticalOrder(TreeNode* root) {
     }
     return ans;
 }
+
+// https://leetcode.com/problems/same-tree/
+// can do a DFS preorder traversal, be careful to not only check the value but also structure of each node
+bool isSameTree(TreeNode* p, TreeNode* q) {
+    if (!p && !q) {
+        return true;
+    }
+
+    if (!p || !q) {
+        return false;
+    }
+
+    stack<pair<TreeNode*, TreeNode*>> s;
+    s.push({ p, q });
+    while (!s.empty()) {
+        auto top = s.top();
+        auto a = top.first;
+        auto b = top.second;
+        s.pop();
+
+        if (a->val != b->val) {
+            return false;
+        }
+
+        if ((a->left == nullptr) ^ (b->left == nullptr)) {
+            // either both have left child or neither
+            return false;
+        }
+
+        if (a->left) {
+            s.push({ a->left, b->left });
+        }
+
+        if ((a->right == nullptr) ^ (b->right == nullptr)) {
+            // either both have left child or neither
+            return false;
+        }
+
+        if (a->right) {
+            s.push({ a->right, b->right });
+        }
+    }
+
+    return true;
+}
