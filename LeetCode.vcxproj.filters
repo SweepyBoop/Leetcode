@@ -115,10 +115,13 @@
     <ClInclude Include="String\SplitMessage.h">
       <Filter>Lib\String</Filter>
     </ClInclude>
-    <ClInclude Include="Binary Tree\MaxDepth.h">
+    <ClInclude Include="Binary Tree\Depth.h">
       <Filter>Lib\Binary Tree</Filter>
     </ClInclude>
     <ClInclude Include="Binary Tree\Traversal.h">
+      <Filter>Lib\Binary Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Binary Tree\Balanced.h">
       <Filter>Lib\Binary Tree</Filter>
     </ClInclude>
   </ItemGroup>
