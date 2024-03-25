@@ -70,3 +70,13 @@ void printPreOrderIterative(TreeNode* root) {
         }
     }
 }
+
+void printPostOrder(TreeNode* root) {
+    if (!root) {
+        return;
+    }
+
+    printPostOrder(root->left);
+    printPostOrder(root->right);
+    cout << root->val << " ";
+}
