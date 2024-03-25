@@ -151,3 +151,9 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 
     return ans;
 }
+
+// https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
+// just reverse the array before returning
+
+// https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+// just reverse the odd index levels (level[1], level[3], etc.)
