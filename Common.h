@@ -6,6 +6,7 @@
 #include <string>
 #include <stack>
 #include <iostream>
+#include <queue>
 using namespace std;
 
 struct ListNode {

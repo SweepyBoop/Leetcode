@@ -43,6 +43,7 @@ int maxDepth(TreeNode* root) {
 }
 
 // https://leetcode.com/problems/minimum-depth-of-binary-tree/
+// this is basically a DFS
 int minDepth(TreeNode* root) {
     if (!root) {
         return 0;
@@ -63,4 +64,44 @@ int minDepth(TreeNode* root) {
         ans = min(ans, 1 + minDepth(root->right));
     }
     return ans;
+}
+
+// Breadth-First Search (BFS) using a queue
+// this is superior, as soon as we reach the leaf node with min height, the algorithm can stop
+int bfs(TreeNode* root) {
+    if (!root) {
+        return 0;
+    }
+
+    queue<TreeNode*> q;
+    q.push(root);
+    int depth = 1;
+
+    // every time we finish visiting a level, increment depth
+    while (!q.empty()) {
+        // mark how many nodes to visit (at current level)
+        int currentLevelSize = q.size();
+
+        while (currentLevelSize--) {
+            TreeNode* node = q.front();
+            q.pop();
+
+            // if we found a leaf node at current level, we found the min depth
+            if (!node->left && !node->right) {
+                return depth;
+            }
+
+            if (node->left) {
+                q.push(node->left);
+            }
+
+            if (node->right) {
+                q.push(node->right);
+            }
+        }
+
+        ++depth;
+    }
+
+    return depth;
 }
