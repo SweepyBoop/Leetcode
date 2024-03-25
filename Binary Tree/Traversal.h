@@ -112,3 +112,42 @@ void printPostOrderIterativeTwoStacks(TreeNode* root) {
         cout << pop->val << " ";
     }
 }
+
+// https://leetcode.com/problems/binary-tree-level-order-traversal/
+// BFS traveral
+vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> ans;
+
+    if (!root) {
+        return ans;
+    }
+
+    queue<TreeNode*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        vector<int> currentLevel;
+
+        // how many nodes at current level
+        int currentLevelSize = q.size();
+
+        while (currentLevelSize--) {
+            TreeNode* node = q.front();
+            q.pop();
+
+            currentLevel.push_back(node->val);
+
+            if (node->left) {
+                q.push(node->left);
+            }
+
+            if (node->right) {
+                q.push(node->right);
+            }
+        }
+
+        ans.push_back(currentLevel);
+    }
+
+    return ans;
+}
