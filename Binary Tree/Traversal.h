@@ -80,3 +80,35 @@ void printPostOrder(TreeNode* root) {
     printPostOrder(root->right);
     cout << root->val << " ";
 }
+
+void printPostOrderIterativeTwoStacks(TreeNode* root) {
+    // similar to preorder, but instead of printing it, push it to a second stack
+    // the second stack will store the post order nodes in reverse
+    if (!root) {
+        return;
+    }
+
+    stack<TreeNode*> stack1;
+    stack1.push(root);
+    stack<TreeNode*> stack2;
+
+    while (!stack1.empty()) {
+        TreeNode* pop = stack1.top();
+        stack1.pop();
+        stack2.push(pop);
+
+        if (pop->left) {
+            stack1.push(pop->left);
+        }
+
+        if (pop->right) {
+            stack1.push(pop->right);
+        }
+    }
+
+    while (!stack2.empty()) {
+        TreeNode* pop = stack2.top();
+        stack2.pop();
+        cout << pop->val << " ";
+    }
+}
