@@ -136,5 +136,8 @@
     <ClInclude Include="Binary Tree\NextPointers.h">
       <Filter>Lib\Binary Tree</Filter>
     </ClInclude>
+    <ClInclude Include="Binary Tree\Flatten.h">
+      <Filter>Lib\Binary Tree</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
