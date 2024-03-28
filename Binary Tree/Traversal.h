@@ -64,12 +64,12 @@ void printPreOrderIterative(TreeNode* root) {
         TreeNode* pop = s.top();
         cout << pop->val << " ";
 
-        if (pop->left) {
-            s.push(pop->left);
-        }
-
         if (pop->right) {
             s.push(pop->right);
+        }
+
+        if (pop->left) {
+            s.push(pop->left);
         }
     }
 }
