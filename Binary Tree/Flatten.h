@@ -72,7 +72,11 @@ void flatten(TreeNode* root) {
                 rightmost = rightmost->right;
             }
 
-
+            rightmost->right = curr->right;
+            curr->right = curr->left;
+            curr->left = nullptr;
         }
+
+        curr = curr->right;
     }
 }
