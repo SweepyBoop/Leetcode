@@ -134,6 +134,7 @@
     <ClInclude Include="Binary Tree\Balanced.h" />
     <ClInclude Include="Binary Tree\Construct.h" />
     <ClInclude Include="Binary Tree\Depth.h" />
+    <ClInclude Include="Binary Tree\Flatten.h" />
     <ClInclude Include="Binary Tree\Invert.h" />
     <ClInclude Include="Binary Tree\Mirror.h" />
     <ClInclude Include="Binary Tree\NextPointers.h" />
