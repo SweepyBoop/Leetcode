@@ -80,3 +80,50 @@ void flatten(TreeNode* root) {
         curr = curr->right;
     }
 }
+
+/*
+    Morris Traversal
+
+           3
+         /   \
+        1     4
+         \
+          2
+    current = 3
+    predecessor = 2, set 2->R = 3, set current = 1
+    current = 1, no left child, PRINT(1), set current = 2
+    current = 2, no left child, PRINT(2), set current = 2->R = 3
+    current = 3, predecessor = 2 and 2->R is set, unset 2->R, PRINT(3), set current = 4
+    current = 4, no left child, PRINT(4)
+*/
+void MorrisTraversal(TreeNode* root) {
+    if (!root) {
+        return;
+    }
+
+    TreeNode* current = root;
+    while (current) {
+        if (!current->left) {
+            cout << current->val << " ";
+            current = current->right;
+        }
+        else {
+            // Find the inorder predecessor of current
+            TreeNode* predecessor = current->left;
+            while (predecessor && predecessor->right) {
+                predecessor = predecessor->right;
+            }
+
+            // Make current as the right child of its inorder predecessor
+            if (!predecessor->right) {
+                predecessor->right = current;
+                current = current->left;
+            }
+            else { // revert the changes made in the 'if' part to restore the original tree, i.e., fix the right child of the predecessor
+                predecessor->right = nullptr;
+                cout << current->val << " ";
+                current = current->right;
+            }
+        }
+    }
+}
