@@ -56,3 +56,23 @@ void flatten(TreeNode* root) {
         prev = top;
     }
 }
+
+// O(1) solution
+void flatten(TreeNode* root) {
+    if (!root) {
+        return;
+    }
+
+    TreeNode* curr = root;
+    while (curr) {
+        // if curr has a left child, find the rightmost node of its left subtree
+        if (curr->left) {
+            TreeNode* rightmost = curr->left;
+            while (rightmost && rightmost->right) {
+                rightmost = rightmost->right;
+            }
+
+
+        }
+    }
+}
